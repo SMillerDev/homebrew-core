@@ -1,9 +1,8 @@
 class Libwmf < Formula
   desc "Library for converting WMF (Window Metafile Format) files"
   homepage "https://wvware.sourceforge.io/libwmf.html"
-  url "https://downloads.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz"
-  sha256 "5b345c69220545d003ad52bfd035d5d6f4f075e65204114a9e875e84895a7cf8"
-  revision 2
+  url "https://github.com/caolanm/libwmf/archive/v0.2.12.tar.gz"
+  sha256 "464ff63605d7eaf61a4a12dbd420f7a41a4d854675d8caf37729f5bc744820e2"
 
   bottle do
     sha256 "4fa5b3dc0b38f72ac7c4d15f4e23bc96c0808d48de28005c4dc74d50292ddf62" => :catalina
