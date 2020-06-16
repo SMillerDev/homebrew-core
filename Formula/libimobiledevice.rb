@@ -1,11 +1,10 @@
 class Libimobiledevice < Formula
   desc "Library to communicate with iOS devices natively"
   homepage "https://www.libimobiledevice.org/"
-  revision 6
 
   stable do
-    url "https://www.libimobiledevice.org/downloads/libimobiledevice-1.2.0.tar.bz2"
-    sha256 "786b0de0875053bf61b5531a86ae8119e320edab724fc62fe2150cc931f11037"
+    url "https://www.libimobiledevice.org/downloads/libimobiledevice-1.3.0.tar.bz2"
+    sha256 "53f2640c6365cd9f302a6248f531822dc94a6cced3f17128d4479a77bd75b0f6"
 
     # Upstream commit for OpenSSL 1.1 compatibility
     patch do
