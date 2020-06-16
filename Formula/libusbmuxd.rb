@@ -3,8 +3,8 @@ class Libusbmuxd < Formula
   homepage "https://www.libimobiledevice.org/"
 
   stable do
-    url "https://github.com/libimobiledevice/libusbmuxd/archive/2.0.1.tar.gz"
-    sha256 "f93faf3b3a73e283646f4d62b3421aeccf58142266b0eb22b2b13dd4b2362eb8"
+    url "https://www.libimobiledevice.org/downloads/libusbmuxd-2.0.2.tar.bz2"
+    sha256 "cc6a808553da4efa9fa5638be256d5ae020498795d9d260d280b87074e799b20"
   end
 
   bottle do
