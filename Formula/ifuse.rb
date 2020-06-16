@@ -1,8 +1,8 @@
 class Ifuse < Formula
   desc "FUSE module for iOS devices"
   homepage "https://www.libimobiledevice.org/"
-  url "https://github.com/libimobiledevice/ifuse/archive/1.1.3.tar.gz"
-  sha256 "9b63afa6f2182da9e8c04b9e5a25c509f16f96f5439a271413956ecb67143089"
+  url "https://www.libimobiledevice.org/downloads/ifuse-1.1.4.tar.bz2"
+  sha256 "3550702ef94b2f5f16c7db91c6b3282b2aed1340665834a03e47458e09d98d87"
   head "https://cgit.sukimashita.com/ifuse.git"
 
   bottle do
