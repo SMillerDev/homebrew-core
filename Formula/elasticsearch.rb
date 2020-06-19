@@ -1,8 +1,8 @@
 class Elasticsearch < Formula
   desc "Distributed search & analytics engine"
   homepage "https://www.elastic.co/products/elasticsearch"
-  url "https://github.com/elastic/elasticsearch/archive/v7.6.2.tar.gz"
-  sha256 "6ff4871dcae6954e13680aefc196da574a59a36418d06a7e095550ce81a370f8"
+  url "https://github.com/elastic/elasticsearch/archive/v7.8.0.tar.gz"
+  sha256 "6a04dac8da32755f53962a34b85b7dac7593b2a544f5bccb50344b2b345b3944"
 
   bottle do
     cellar :any_skip_relocation
@@ -113,10 +113,12 @@ class Elasticsearch < Formula
   test do
     port = free_port
     pid = testpath/"pid"
-    system bin/"elasticsearch", "-d", "-p", pid,
-                                "-Ehttp.port=#{port}",
-                                "-Epath.data=#{testpath}/data",
-                                "-Epath.logs=#{testpath}/logs"
+    fork do
+      exec bin/"elasticsearch", "-p", pid,
+                              "-Ehttp.port=#{port}",
+                              "-Epath.data=#{testpath}/data",
+                              "-Epath.logs=#{testpath}/logs"
+    end
     sleep 10
     output = shell_output("curl -s -XGET localhost:#{port}/")
     assert_equal "oss", JSON.parse(output)["version"]["build_flavor"]
