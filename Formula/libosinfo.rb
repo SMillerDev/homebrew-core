@@ -23,8 +23,8 @@ class Libosinfo < Formula
   depends_on "libxml2"
 
   resource "pci.ids" do
-    url "https://pci-ids.ucw.cz/v2.2/pci.ids.gz"
-    sha256 "09dc9980728dfeb123884ecedf51311f6441ffa8c5fa246e4cbea571ceae41b7"
+    url "https://deb.debian.org/debian/pool/main/p/pci.ids/pci.ids_0.0~2020.07.21.orig.tar.xz"
+    sha256 "b520bcc27da6a65b91abefd424b278823586dd116d0570a0670033e7011d5f50"
   end
 
   resource "usb.ids" do
