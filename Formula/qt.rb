@@ -67,6 +67,8 @@ class Qt < Formula
       -proprietary-codecs
     ]
 
+    args << "-device-option QMAKE_APPLE_DEVICE_ARCHS=arm64" if Hardware::CPU.arm?
+
     system "./configure", *args
 
     # Remove reference to shims directory
