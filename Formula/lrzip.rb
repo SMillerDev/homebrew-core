@@ -3,7 +3,7 @@ class Lrzip < Formula
   homepage "http://lrzip.kolivas.org"
   url "http://ck.kolivas.org/apps/lrzip/lrzip-0.640.tar.xz"
   sha256 "49922ad714dc98c1abd3220ecd2aab7cc88c73b1ee5f909dcee85f979b31a49c"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "http://ck.kolivas.org/apps/lrzip/"
