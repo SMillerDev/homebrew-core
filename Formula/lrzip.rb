@@ -1,8 +1,8 @@
 class Lrzip < Formula
   desc "Compression program with a very high compression ratio"
   homepage "http://lrzip.kolivas.org"
-  url "http://ck.kolivas.org/apps/lrzip/lrzip-0.631.tar.bz2"
-  sha256 "0d11e268d0d72310d6d73a8ce6bb3d85e26de3f34d8a713055f3f25a77226455"
+  url "http://ck.kolivas.org/apps/lrzip/lrzip-0.640.tar.xz"
+  sha256 "49922ad714dc98c1abd3220ecd2aab7cc88c73b1ee5f909dcee85f979b31a49c"
   license "GPL-2.0"
 
   livecheck do
@@ -22,7 +22,9 @@ class Lrzip < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "lz4"
   depends_on "lzo"
+  depends_on "nasm"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
