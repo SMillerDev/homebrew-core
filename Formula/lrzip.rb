@@ -30,9 +30,14 @@ class Lrzip < Formula
   uses_from_macos "zlib"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
-    system "make"
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+    ]
+    args << "--disable-asm" unless Hardware::CPU.intel?
+    
+    system "./configure", *args
+    system "make", "SHELL=bash"
     system "make", "install"
   end
 
