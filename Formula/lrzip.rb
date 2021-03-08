@@ -21,10 +21,10 @@ class Lrzip < Formula
     sha256 cellar: :any, yosemite:      "345d0f65ddc44faab696c5e5bfabf6a6d408435858f49cfd630ee74e61f0c97c"
   end
 
+  depends_on "nasm" => :build if Hardware::CPU.intel?
   depends_on "pkg-config" => :build
   depends_on "lz4"
   depends_on "lzo"
-  depends_on "nasm" => :build if Hardware::CPU.intel?
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
