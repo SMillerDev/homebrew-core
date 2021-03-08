@@ -24,7 +24,7 @@ class Lrzip < Formula
   depends_on "pkg-config" => :build
   depends_on "lz4"
   depends_on "lzo"
-  depends_on "nasm"
+  depends_on "nasm" => :build if Hardware::CPU.intel?
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
