@@ -35,7 +35,7 @@ class Lrzip < Formula
       --prefix=#{prefix}
     ]
     args << "--disable-asm" unless Hardware::CPU.intel?
-    
+
     system "./configure", *args
     system "make", "SHELL=bash"
     system "make", "install"
