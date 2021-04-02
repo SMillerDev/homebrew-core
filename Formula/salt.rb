@@ -244,6 +244,10 @@ class Salt < Formula
 
   def install
     ENV["SWIG_FEATURES"]="-I#{Formula["openssl@1.1"].opt_include}"
+    xy = Language::Python.major_minor_version Formula["python@3.9"].bin/"python3.9"
+
+    inreplace buildpath/"requirements/static/pkg/py#{xy}/darwin.txt", /^pyobjc.*$/, ""
+    inreplace buildpath/"requirements/darwin.txt", /^pyobjc.*$/, ""
 
     virtualenv_install_with_resources
 
