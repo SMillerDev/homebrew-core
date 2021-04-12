@@ -17,6 +17,7 @@ class Field3d < Formula
   depends_on "boost"
   depends_on "hdf5"
   depends_on "ilmbase"
+  depends_on "open-mpi"
 
   def install
     ENV.cxx11
