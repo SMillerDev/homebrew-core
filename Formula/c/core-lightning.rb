@@ -4,6 +4,7 @@ class CoreLightning < Formula
   url "https://github.com/ElementsProject/lightning/releases/download/v23.08.1/clightning-v23.08.1.zip"
   sha256 "3e89e0ce0afe54cae9f27ae99d1d1009aacc59404f3e34dda1e6efa56ad2cbac"
   license "MIT"
+  revision 1
 
   livecheck do
     url :stable
